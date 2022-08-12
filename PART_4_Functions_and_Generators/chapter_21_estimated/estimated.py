@@ -1,6 +1,6 @@
 import time
 import random
-from chapter_21_timer import total, bestof, bestoftotal
+from timer import total, bestof, bestoftotal
 
 
 def timer(func, *args):

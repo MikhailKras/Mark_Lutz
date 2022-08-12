@@ -27,7 +27,7 @@ def bestof(reps, func, *pargs, **kargs):
         ret = func(*pargs, **kargs)
         elapsed = timer() - start
         if elapsed < best: best = elapsed
-    return best, ret
+    return round(best, 3), ret
 
 
 def bestoftotal(reps1, reps2, func, *args, **kwargs):

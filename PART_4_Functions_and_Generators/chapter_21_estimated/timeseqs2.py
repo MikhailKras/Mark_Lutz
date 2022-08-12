@@ -1,32 +1,33 @@
-import sys, chapter_21_timer
+import sys
+from estimated import chapter_21_timer
 
 reps = 10000
-repslist = list(range(-2*reps, -reps))
+repslist = list(range(reps))
 
 
 def for_loop():
     res = []
     for x in repslist:
-        res.append(abs(x))
+        res.append(x + 10)
     return res
 
 
 def list_comp():
-    return [abs(x) for x in repslist]
+    return [x + 10 for x in repslist]
 
 
 def map_call():
-    return list(map(abs, repslist))
+    return list(map(lambda x: x + 10, repslist))
 
 
 def gen_expr():
-    return list(abs(x) for x in repslist)
+    return list(x + 10 for x in repslist)
 
 
 def gen_func():
     def gen():
         for x in repslist:
-            yield abs(x)
+            yield x + 10
     return list(gen())
 
 
