@@ -1,5 +1,5 @@
 import sys
-from estimated import chapter_21_timer
+from PART_4_Functions_and_Generators.chapter_21_estimated import timer
 
 reps = 10000
 repslist = list(range(reps))
@@ -33,6 +33,6 @@ def gen_func():
 
 print(sys.version)
 for test in (for_loop, list_comp, map_call, gen_expr, gen_func):
-    (bestof, (total, result)) = chapter_21_timer.bestoftotal(10, 1000, test)
+    (bestof, (total, result)) = timer.bestoftotal(10, 1000, test)
     print('%-9s: %.5f => [%s...%s]' %
           (test.__name__, bestof, result[0], result[-1]))
