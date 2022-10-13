@@ -1,8 +1,8 @@
-import types
+import typing
 
 
 class tracer:
-    def __init__(self, func: types.FunctionType):
+    def __init__(self, func: typing.Callable):
         self.calls = 0
         self.func = func
 
